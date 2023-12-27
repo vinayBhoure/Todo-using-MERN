@@ -6,7 +6,6 @@ exports.createTodo = async (req, res) => {
     const { title, description } = req.body;
     //feeding it into database
     const response = await todo.create({ title, description });
-    c
 
     res.status(200).json({
       success: true,

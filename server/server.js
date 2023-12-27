@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 
 // sending .env data to proess object
 require("dotenv").config();
