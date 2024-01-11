@@ -18,6 +18,9 @@ app.use(express.json());
 const todoRoute = require("./routes/todo");
 
 //creating a route
+app.get("/", (req, res) => {
+  res.send(`<h1>This is the home page</h1>`);
+});
 app.use("/todo", todoRoute);
 
 
@@ -26,6 +29,4 @@ const dbConnect = require("./config/database");
 
 dbConnect();
 
-app.get("/", (req, res) => {
-  res.send(`<h1>This is the home page</h1>`);
-});
+
